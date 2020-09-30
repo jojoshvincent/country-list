@@ -1,0 +1,28 @@
+<div class="container" style="border: 1px solid grey;background-color: darkgray" [formGroup]="addCountryForm">
+    <div style="text-align: center;margin: 10px 0px;border-bottom: 1px solid grey;">
+        <h2>Country Master</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h6>Country code</h6>
+            <input type="text" placeholder="country code" disabled>
+        </div>
+        <div class="col-sm-6">
+            <h6>Country Name</h6>
+            <input type="text" placeholder="country name" formControlName="country_name">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <h6>Alpha code2</h6>
+            <input type="text" placeholder="alpha code2" formControlName="alpha_code2">
+        </div>
+        <div class="col-sm-6">
+            <h6>Alpha code3</h6>
+            <input type="text" placeholder="alpha code3" formControlName="alpha_code3">
+        </div>
+    </div>
+    <button (click)="create()">Save</button>
+    <button (click)="view()">View</button>
+    </div>

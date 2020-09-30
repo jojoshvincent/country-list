@@ -1,0 +1,29 @@
+<div class="container" style="border: 1px solid grey;background-color: darkgray">
+    <div style="text-align: center;margin: 10px 0px;border-bottom: 1px solid grey;">
+        <h2>Country Master</h2>
+    </div>
+    <div>
+        <input type="text" placeholder="search country" [formControl]="myControl">
+    </div>           
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Country</th>
+          <th>Alpha Code 2</th>
+          <th>Alpha Code 3</th>
+          <th (click)="addCountry()">Create</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of filteredResults | async">
+          <td>{{item.code}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.alpha2Code}}</td>
+          <td>{{item.alpha3Code}}</td>
+          <td (click)="editData(item)">Edit</td>
+          <td (click)="deleteData(item)">Delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
