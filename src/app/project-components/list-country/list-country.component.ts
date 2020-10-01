@@ -38,7 +38,7 @@ export class ListCountryComponent implements OnInit {
   }
 
   httpRequest(){
-    const url = 'https://trn.api.alqasim.net/country/';
+    const url = '';
     this.http.get(url).subscribe(result => {
       console.log('Api response get countries', result);
       this.countryList = result;

@@ -40,7 +40,7 @@ export class EditCountryComponent implements OnInit {
   }
 
   httpRequest(body, id){
-    const url = 'https://trn.api.alqasim.net/country/' + id;
+    const url = '' + id;
     this.http.put(url, body).subscribe(result => {
       console.log('Api response put', result);
     }, error => {
@@ -49,7 +49,7 @@ export class EditCountryComponent implements OnInit {
   }
 
   getData(id){
-    const url = 'https://trn.api.alqasim.net/country/' + id;
+    const url = '' + id;
     this.http.get(url).subscribe(result => {
       this.editData = result;
       this.editCountryForm = this.formBuilder.group({

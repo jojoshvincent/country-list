@@ -32,7 +32,7 @@ export class AddCountryComponent implements OnInit {
       alpha2Code: this.addCountryForm.value.alpha_code2,
       alpha3Code: this.addCountryForm.value.alpha_code3
     }
-    const postUrl = 'https://trn.api.alqasim.net/country/'
+    const postUrl = ''
     this.httpRequest(postUrl, data);
   }
 
